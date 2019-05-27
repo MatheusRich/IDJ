@@ -65,18 +65,18 @@ Game::Game(std::string title, int width, int height) {
   }
 
   // Window creation
-  window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED,
+  this->window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED,
                             SDL_WINDOWPOS_CENTERED, width, height, 0);
-  if (window == nullptr) {
+  if (this->window == nullptr) {
     printf("SDL Create Window: %s\n", SDL_GetError());
     exit(-1);
   }
                                
   // Renderer creation
   int SUPPORTED_RENDERER = -1;
-  renderer = SDL_CreateRenderer(window, SUPPORTED_RENDERER, SDL_RENDERER_ACCELERATED);
+  this->renderer = SDL_CreateRenderer(this->window, SUPPORTED_RENDERER, SDL_RENDERER_ACCELERATED);
 
-  if (renderer == nullptr) {
+  if (this->renderer == nullptr) {
     printf("SDL Create Renderer: %s\n", SDL_GetError());
     exit(-1);
   }
@@ -116,7 +116,7 @@ void Game::Run() {
   }
 
   if (not this->stateStack.empty()) {
-    this->CalculateDeltaTime(); // TODO: Where to put this?
+    this->CalculateDeltaTime();
 
     while (!this->GetCurrentState().QuitRequested() && !this->stateStack.empty()) {
       if (this->GetCurrentState().PopRequested()) {
