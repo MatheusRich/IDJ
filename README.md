@@ -16,3 +16,5 @@ make run
 ### [Exercise 03](https://github.com/MatheusRich/IDJ/releases/tag/v0.3)
 ### [Exercise 04](https://github.com/MatheusRich/IDJ/releases/tag/v0.4)
 ### [Exercise 05](https://github.com/MatheusRich/IDJ/releases/tag/v0.5)
+### [Exercise 06](https://github.com/MatheusRich/IDJ/releases/tag/v0.6)
+### [Exercise 07](https://github.com/MatheusRich/IDJ/releases/tag/v0.7)
